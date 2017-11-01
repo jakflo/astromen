@@ -45,7 +45,6 @@ function mod_astro(){
         while (0==0){
             if (a.indexOf("0") != 0){ return a;}
             a = a.slice("1");
-            return a;
         }
     }
     $("#astro_form input[name = 'DOB_day']").val(unzero(date[0]));
