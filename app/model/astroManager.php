@@ -68,6 +68,7 @@ class astroManager {
             if ($mon == 2){
                 if ($year % 4 == 0 && $day > 29){$errs->DOB = "Špatné datum";}
                 if ($year % 4 != 0 && $day > 28){$errs->DOB = "Špatné datum";}
+                if ($year % 100 == 0 && $year % 400 != 0 && $day > 28){$errs->DOB = "Špatné datum";}
             }
         }
         if ($payload->skill == ""){$errs->skill = "Chybí schopnost";}
